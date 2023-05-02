@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./assets/styles/reset.css";
+import "./assets/styles/App.scss";
+import React from "react";
+import { ChakraProvider } from "@chakra-ui/react";
+import { useData } from './useData'; // import the custom hook
+import Main from "./containers/Main";
 
 function App() {
+  const { profileData } = useData(); // use the custom hook
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider>
+      <Main profileData={profileData} />
+    </ChakraProvider>
   );
 }
 

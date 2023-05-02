@@ -1,0 +1,60 @@
+      {" "}
+      <Box
+        style={{ height: "100vh" }}
+        py={8}
+        minHeight="100vh"
+        position="relative"
+      >
+        {" "}
+        <Divider />{" "}
+        <Box
+          className="glass-background"
+          style={{
+            opacity: opacity,
+            transition: "opacity 0.5s ease-out",
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            bg: "rgba(255, 255, 255, 0.5)",
+          }}
+        ></Box>
+        <Heading
+          as="h1"
+          size="2xl"
+          textAlign="center"
+          position={"relative"}
+          alignItems={"bottom"}
+          color="black"
+          mb={8}
+          zIndex={"900"}
+        >
+          Productivity Tab
+        </Heading>
+        <ObjectArrayContainer
+          isAuthenticated={isAuthenticated}
+          tabs={state.createdTabs}
+          profileData={state.profileData} // Pass profileData here
+          deleteTab={deleteTab}
+          malkovaRises={getMalkova}
+          updateTabTitle={updateTabTitle}
+          handleOpenModal={handleOpenModal}
+          handleSubmit={handleFormSubmit}
+          photos={state.photos} // Pass the photos array here
+        />
+        <ObjectDetailsModal
+          className="ObjectDetailsModal"
+          isOpen={objectEditModalOpen}
+          onClose={handleCloseModal}
+          objectIndex={clickedBoxIndex}
+          handleOpenModal={handleOpenModal}
+        >
+          <ObjectDetailsInput
+            onSubmit={handleFormSubmit}
+            postTab={postTab}
+            profileData={state.profileData}
+          />
+          {/* <OpenNewTab handleOpenModal={handleOpenModal} /> */}
+        </ObjectDetailsModal>
+      </Box>

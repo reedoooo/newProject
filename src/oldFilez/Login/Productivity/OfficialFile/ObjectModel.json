@@ -1,0 +1,10 @@
+{
+    "basic_info": {
+      "id": "XXX",
+      "title": "ChatGPT",
+      "linkURL": "https://chatgpt.com",
+      "imageURL": "https://chatgpt.com/images/preview.png",
+      "size": "large",
+      "description": "ChatGPT is a chatbot that uses GPT-3 to generate responses to user input. The project showcases the developer's proficiency in React and JavaScript. The application includes features such as a chatbot that generates responses to user input, a search bar that allows users to search for specific responses, and a settings page that allows users to customize the chatbot's settings. ChatGPT demonstrates the developer's ability to use React and JavaScript to create a functional and user-friendly web application."
+    }
+}
